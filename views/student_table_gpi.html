@@ -1,0 +1,118 @@
+<table class="gcb-student-data-table">
+        <colgroup>
+          <col style="width: 10%">
+          <col>
+        </colgroup>
+        <tr>
+          <th align="left">{% trans %} Currently enrolled {% endtrans %}</th>
+          <td>{{ student.is_enrolled }}</td>
+        </tr>
+        <tr>
+          <th align="left">{% trans %} Date enrolled {% endtrans %}</th>
+          <td>{{ student.enrolled_on }}</td>
+        </tr>
+        <tr>
+          <th align="left">{% trans %} Email {% endtrans %}</th>
+          <td>{{ student.key().name() }}</td>
+        </tr>
+        <tr>
+          <th align="left">{% trans %} Name {% endtrans %}</th>
+          <td>{{ student.name }}</td>
+        </tr>
+
+        {%if (scores != "") %}
+	
+        <tr>
+          <th align="left" colspan=2>{% trans %} Questions scores {% endtrans %}</th>
+        </tr>
+        <tr>
+          <th align="left">&nbsp;&nbsp;&nbsp;{% trans %} Module 1 {% endtrans %}</th>
+          <td>
+            {% if scores.has_key('a1course') %}
+             {% if scores.has_key('overall_score') %}
+              best score: {{ scores['a1course'] }}
+	     {%else%}
+  	       done
+	     {% endif %}
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <th align="left">&nbsp;&nbsp;&nbsp;{% trans %} Module 2 {% endtrans %}</th>
+          <td>
+            {% if scores.has_key('a2course') %}
+             {% if scores.has_key('overall_score') %}
+	      best score: {{ scores['a2course'] }}
+	     {%else%}
+  	       done
+	     {% endif %}
+	    {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <th align="left">&nbsp;&nbsp;&nbsp;{% trans %} Module 3 {% endtrans %}</th>
+          <td>
+            {% if scores.has_key('a3course') %}
+             {% if scores.has_key('overall_score') %}
+	     best score: {{ scores['a3course'] }}
+	     {%else%}
+  	       done
+	     {% endif %}
+	    {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <th align="left">&nbsp;&nbsp;&nbsp;{% trans %} Module 4 {% endtrans %}</th>
+          <td>
+            {% if scores.has_key('a4course') %}
+             {% if scores.has_key('overall_score') %}
+             best score: {{ scores['a4course'] }}
+	     {%else%}
+  	       done
+	     {% endif %}
+            {% endif %}
+          </td>
+        </tr>
+	<tr>
+          <th align="left">&nbsp;&nbsp;&nbsp;{% trans %} Module 5 {% endtrans %}</th>
+          <td>
+            {% if scores.has_key('a5course') %}
+             {% if scores.has_key('overall_score') %}
+             best score: {{ scores['a5course'] }}
+	     {%else%}
+  	       done
+	     {% endif %}
+            {% endif %}
+          </td>
+        </tr>
+	<tr>
+          <th align="left">&nbsp;&nbsp;&nbsp;{% trans %} Module 6 {% endtrans %}</th>
+          <td>
+            {% if scores.has_key('a6course') %}
+             {% if scores.has_key('overall_score') %}
+             best score: {{ scores['a6course'] }}
+	     {%else%}
+  	       done
+	     {% endif %}
+	    {% endif %}
+          </td>
+        </tr>
+	<tr>
+        <tr>
+          <th align="left">{% trans %} Original score {% endtrans %}</th>
+          <td>
+	    {% if scores.has_key('postcourse') and  scores['postcourse'] > 0 %}
+              {{ scores['postcourse'] }}
+            {% endif %}
+          </td>
+        </tr>
+          <th align="left">{% trans %} Latest score {% endtrans %}</th>
+          <td>
+            {% if scores.has_key('overall_score') %}
+              {{ scores['overall_score'] }}
+            {% endif %}
+          </td>
+        </tr>
+      {% endif %}
+</table>
+

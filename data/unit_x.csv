@@ -1,0 +1,40 @@
+id,type,unit_id,title,release_date,now_available
+1,U,1,Pre-course Questionnaire,Available September 21,True
+2,A,M11,Pre-course Questions,,True
+3,A,M12,Pre-course Questions_ES,,True
+
+4,U,2,Purpose of Re-certifications,Available September 21,True
+5,A,M21,Module 2 - Questions,,True
+6,A,M22,Module 2 - Questions_ES,,True
+
+7,U,3,GPI Rep Role,Available September 21,True
+8,A,M31,Module 3 - Questions,,True
+9,A,M32,Module 3 - Questions_ES,,True
+
+10,U,4,Code of Conduct,Available September 21,True
+11,A,M41,Module 4 - Questions,,True
+12,A,M43,Module 4 - Questions_ES,,True
+
+13,U,5,Harassment Prevention,Available September 21,True
+14,A,M51,Module 5 - Questions,,True
+15,A,M52,Module 5 - Questions_ES,,True
+
+16,U,6,Promoting Events,Available September 21,True
+17,A,M61,Module 6 - Questions,,True
+18,A,M62,Module 6 - Questions_ES,,True
+
+19,U,7,Presentation skills,Available September 21,True
+20,A,M71,Module 7 - Questions,,True
+21,A,M72,Module 7 - Questions_ES,,True
+
+22,U,8,Facilitating groups,Available September 21,True
+23,A,M81,Module 8 - Questions,,True
+24,A,M82,Module 8 - Questions_ES,,True
+
+25,U,9,What you learned,Available September 21,True
+26,A,M91,Module 9 - Questions,,True
+27,A,M92,Module 9 - Questions_ES,,True
+
+28,A,Fin,Feedback Form - Questions,,True
+29,A,FinE,Feedback Form - Questions_ES,,True
+

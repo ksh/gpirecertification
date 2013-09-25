@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block top_content %}
+{% endblock %}
+
+{% block main_content %}
+
+<div class="gcb-cols">
+  <div class="gcb-col-1">
+  </div>
+  <div class="gcb-col-7 gcb-aside gcb-button-box">
+	  <p class="gcb-top-content">
+
+      {# I18N: Shown after the student has submitted an assessment. #}
+      <!-- Displays the student's score. -->
+      {% if assessment == 'postcourse_pass' or assessment == 'postcourse_fail' or assessment == 'postcourse_100' %}
+        {{course_info.assessment_confirmations.postcourse_header % overall_score}}
+      {% endif %}
+        <!-- Displays further confirmation text relevant to the specific assessment. -->        
+	{{course_info.assessment_confirmations[assessment]}}
+
+      </p>
+    <p>
+      <a class="gcb-button" href="course">
+        {# I18N: Shown after the student has submitted an assessment. This button allows the student to navigate back to the main course page. #}
+        {{ gettext('Back to Course page') }}
+      </a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}
