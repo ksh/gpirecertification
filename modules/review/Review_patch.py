@@ -565,7 +565,7 @@ class Manager(object):
 
     @classmethod
     def get_expiry_query(
-        cls, review_window_mins, unit_id, now_fn=datetime.datetime.now):
+        cls, review_window_mins, unit_id, now_fn=datetime.datetime.utcnow):
         """Gets a db.Query that returns review steps to mark expired.
 
         Results are items that were assigned by machine, are currently assigned,
@@ -1062,7 +1062,7 @@ def register_module():
     from modules.review import cron  # pylint: disable-msg=g-import-not-at-top
 
     # register custom dashboard section
-    modules.dashboard.dashboard.DashboardRegistry.add_custom_analytics_section(
+    modules.dashboard.dashboard.DashboardRegistry.add_analytics_section(
         stats.PeerReviewStatsHandler)
 
     # register this peer review implementation
@@ -1079,3 +1079,4 @@ def register_module():
         'A set of classes for managing peer review process.',
         cron_handlers, [])
     return custom_module
+

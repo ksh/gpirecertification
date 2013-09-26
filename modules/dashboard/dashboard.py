@@ -61,7 +61,7 @@ import logging
 
 #MODULE_QUESTIONS =  [4,10,7,5,5,5,5,7,5,5,5,11,7]
 # 5 e 6 - ppresentation; 7 - facilitation; 8 - postcourse feedback
-MODULE_QUESTIONS =  [2,4,5,4,3,3,3,7]
+MODULE_QUESTIONS =  [2,4,5,4,3,3,5,7]
 
 class DashboardHandler(
     CourseSettingsHandler, FileManagerAndEditor, UnitLessonEditor,
