@@ -18,7 +18,7 @@ appcfg.py  upload_data --url=http://localhost:16090/_ah/remote_api --config_file
 ---------
 - remote
 ---------
-appcfg.py  upload_data --url=https://gpirecertification.appspot.com/_ah/remote_api --config_file=../bulkloader.yaml --filename=validstudent.csv --kind=ValidStudent --namespace=ns_gpirecert
+appcfg.py  upload_data --url=https://gpirecertification.appspot.com/_ah/remote_api --config_file=../bulkloader.yaml --filename=validstudent_short.csv --kind=ValidStudent --namespace=ns_gpirecert
 
 appcfg.py  upload_data --url=https://gpirecertification.appspot.com/_ah/remote_api --config_file=../bulkloader.yaml --filename=profile.csv --kind=Profile --namespace=ns_gpirecert
 

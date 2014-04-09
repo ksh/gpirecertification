@@ -710,6 +710,7 @@ class StudentAggregator(object):
 
     def visit(self, student):
         if student.scores:
+	    logging.error('student : %s  dados : %s ', student.key(),student.key().name())
             scores = transforms.loads(student.scores)
             valid = ValidStudent.get_valid(student.key().name())
 	    chave= student.user_id+","+student.name+","+valid.profile
